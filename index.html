@@ -56,7 +56,6 @@
         }
         .btn-lime:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(193, 255, 0, 0.3); }
 
-        /* YouTube Container */
         .video-container {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -81,7 +80,6 @@
             border: 0;
         }
 
-        /* Simulator UI */
         .demo-container {
             background: var(--demo-bg);
             border: 2px solid var(--border-color);
@@ -119,7 +117,6 @@
     </div>
 </nav>
 
-<!-- HERO & REAL SIMULATOR -->
 <section class="container py-5 mt-lg-5">
     <div class="row align-items-center g-5">
         <div class="col-lg-6" data-aos="fade-up">
@@ -150,7 +147,6 @@
     </div>
 </section>
 
-<!-- YOUTUBE VIDEO SECTION -->
 <section class="container py-5">
     <div class="text-center mb-5" data-aos="fade-up">
         <h2 class="hero-title mb-3" style="font-size: 3.5rem;">User <span class="highlight">Stories</span></h2>
@@ -158,48 +154,44 @@
     </div>
 
     <div class="row g-4">
-        <!-- VIDEO 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Case Study 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Case Study 1" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
                     <h5 class="fw-800 mb-2">Dev Speed</h5>
-                    <p class="small m-0" style="color: var(--text-muted);">How developers use voice triggers for boilerplate code and deployments.</p>
+                    <p class="small m-0" style="color: var(--text-muted);">How developers use voice triggers for boilerplate code and deployments</p>
                 </div>
             </div>
         </div>
 
-        <!-- VIDEO 2 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Case Study 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Case Study 2" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
                     <h5 class="fw-800 mb-2">Recruiting Automation</h5>
-                    <p class="small m-0" style="color: var(--text-muted);">Scale personalized outreach without burning out your wrists.</p>
+                    <p class="small m-0" style="color: var(--text-muted);">Scale personalized outreach without burning out your wrists</p>
                 </div>
             </div>
         </div>
 
-        <!-- VIDEO 3 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Case Study 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Case Study 3" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
                     <h5 class="fw-800 mb-2">Support Mastery</h5>
-                    <p class="small m-0" style="color: var(--text-muted);">Resolve tickets 5x faster by speaking complex resolution steps.</p>
+                    <p class="small m-0" style="color: var(--text-muted);">Resolve tickets 5x faster by speaking complex resolution steps</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PRICING -->
 <section class="container py-5 text-center">
     <h2 class="hero-title mb-5">Pick your <span class="highlight">Power</span></h2>
     <div class="row g-4 justify-content-center">
@@ -230,7 +222,6 @@
 <script>
     AOS.init({ duration: 1000, once: true });
 
-    // Voice Simulator Logic
     const startBtn = document.getElementById('start-demo');
     const typedText = document.getElementById('typed-text');
     const instruction = document.getElementById('demo-instruction');
@@ -260,9 +251,7 @@
             }
         };
 
-        recognition.onerror = () => {
-            startBtn.innerText = "Start Listening";
-        };
+        recognition.onerror = () => { startBtn.innerText = "Start Listening"; };
     } else {
         document.getElementById('error-msg').style.display = 'block';
     }
@@ -280,7 +269,6 @@
         }, 25);
     }
 
-    // Theme Toggle
     document.getElementById('theme-toggle').addEventListener('click', () => {
         const h = document.documentElement;
         const n = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
