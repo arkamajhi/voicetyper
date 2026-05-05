@@ -52,10 +52,11 @@
         .btn-lime {
             background: var(--accent-lime); color: #000 !important; padding: 18px 38px; border-radius: 100px;
             font-weight: 800; text-transform: uppercase; transition: 0.3s; border: none; display: inline-block;
+            text-decoration: none;
         }
         .btn-lime:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(193, 255, 0, 0.3); }
 
-        /* YouTube Video Card Styling */
+        /* YouTube Container */
         .video-container {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -64,11 +65,11 @@
             transition: 0.3s;
             height: 100%;
         }
-        .video-container:hover { border-color: var(--accent-lime); transform: translateY(-5px); }
+        .video-container:hover { border-color: var(--accent-lime); }
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             background: #000;
@@ -90,6 +91,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
         }
         .input-mock {
             background: var(--bg-card);
@@ -99,11 +101,11 @@
             min-height: 120px;
             color: var(--text-main);
             font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
         }
         .cursor { border-right: 3px solid var(--accent-lime); animation: blink 1s infinite; }
         @keyframes blink { 50% { border-color: transparent; } }
 
-        /* General Styling */
         .tag { display: inline-block; padding: 6px 16px; border-radius: 100px; background: rgba(193, 255, 0, 0.15); color: var(--accent-lime); font-size: 0.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; }
         .pricing-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 40px; padding: 50px 30px; }
     </style>
@@ -117,78 +119,80 @@
     </div>
 </nav>
 
-<!-- HERO & LIVE VOICE SIMULATOR -->
+<!-- HERO & REAL SIMULATOR -->
 <section class="container py-5 mt-lg-5">
     <div class="row align-items-center g-5">
         <div class="col-lg-6" data-aos="fade-up">
-            <div class="tag">System Ready</div>
-            <h1 class="hero-title">Talk more. <br>Type <span class="highlight">less.</span></h1>
+            <div class="tag">Next Gen Productivity</div>
+            <h1 class="hero-title">Talk more <br>Type <span class="highlight">less</span></h1>
             <p class="mb-5 fs-4" style="color: var(--text-sub);">
-                A universal voice-to-text shortcut. Map entire paragraphs to one spoken word. Instant, global, and dangerously fast.
+                A universal voice-to-text shortcut for high-performers. Map entire workflows to one spoken word instantly
             </p>
-            <a href="#" class="btn-lime">Start Saving Time</a>
+            <a href="#" class="btn-lime">Get VoiceTyper Free</a>
         </div>
 
         <div class="col-lg-6" data-aos="zoom-in">
             <div class="demo-container">
                 <div class="text-center">
-                    <span class="tag">Live Voice Simulator</span>
+                    <span class="tag">Interactive Simulator</span>
                     <h4 id="demo-instruction" style="color: var(--text-main); font-weight: 800;">Say "Address" or "Email"</h4>
+                    <p id="demo-subtext" style="color: var(--text-muted); font-size: 0.9rem;">Real speech recognition active</p>
                 </div>
                 <div class="input-mock mt-3">
                     <span id="typed-text"></span><span class="cursor"></span>
                 </div>
                 <div class="text-center mt-4">
-                    <button id="start-demo" class="btn-lime w-100 py-3">Click & Speak</button>
+                    <button id="start-demo" class="btn-lime w-100 py-3">Start Listening</button>
+                    <p id="error-msg" class="small mt-2 text-danger" style="display:none;">Mic access required for simulator</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CONFIGURABLE YOUTUBE CASE STUDIES -->
+<!-- YOUTUBE VIDEO SECTION -->
 <section class="container py-5">
     <div class="text-center mb-5" data-aos="fade-up">
-        <h2 class="hero-title mb-3" style="font-size: 3.5rem;">User <span class="highlight">Spotlight.</span></h2>
-        <p style="color: var(--text-sub);">Watch how high-performers use VoiceTyper to skip the grunt work.</p>
+        <h2 class="hero-title mb-3" style="font-size: 3.5rem;">User <span class="highlight">Stories</span></h2>
+        <p style="color: var(--text-sub);">Watch how the top 1% skip the typing grunt work</p>
     </div>
 
     <div class="row g-4">
-        <!-- VIDEO 1: SWAP "q7ny_v-S384" with your YouTube ID -->
+        <!-- VIDEO 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Case Study 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
-                    <h5 class="fw-800 mb-1">Developer Workflow</h5>
-                    <p class="small m-0" style="color: var(--text-muted);">Triggering complex React components via voice commands.</p>
+                    <h5 class="fw-800 mb-2">Dev Speed</h5>
+                    <p class="small m-0" style="color: var(--text-muted);">How developers use voice triggers for boilerplate code and deployments.</p>
                 </div>
             </div>
         </div>
 
-        <!-- VIDEO 2: SWAP "VIDEO_ID" below -->
+        <!-- VIDEO 2 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Case Study 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
-                    <h5 class="fw-800 mb-1">Recruitment Outreach</h5>
-                    <p class="small m-0" style="color: var(--text-muted);">Personalizing 100+ messages an hour with zero typing.</p>
+                    <h5 class="fw-800 mb-2">Recruiting Automation</h5>
+                    <p class="small m-0" style="color: var(--text-muted);">Scale personalized outreach without burning out your wrists.</p>
                 </div>
             </div>
         </div>
 
-        <!-- VIDEO 3: SWAP "VIDEO_ID" below -->
+        <!-- VIDEO 3 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="video-container">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Case Study 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="p-4">
-                    <h5 class="fw-800 mb-1">Support Automation</h5>
-                    <p class="small m-0" style="color: var(--text-muted);">How support teams resolve tickets in record time.</p>
+                    <h5 class="fw-800 mb-2">Support Mastery</h5>
+                    <p class="small m-0" style="color: var(--text-muted);">Resolve tickets 5x faster by speaking complex resolution steps.</p>
                 </div>
             </div>
         </div>
@@ -197,12 +201,13 @@
 
 <!-- PRICING -->
 <section class="container py-5 text-center">
+    <h2 class="hero-title mb-5">Pick your <span class="highlight">Power</span></h2>
     <div class="row g-4 justify-content-center">
         <div class="col-md-4">
             <div class="pricing-card">
-                <h4 class="fw-800">FREE</h4>
+                <h4 class="fw-800">LITE</h4>
                 <div class="display-3 fw-800 my-4">€0</div>
-                <p style="color: var(--text-sub);">Basic Recognition</p>
+                <p style="color: var(--text-sub);">5 Commands • Voice UI</p>
                 <a href="#" class="btn btn-outline-secondary rounded-pill w-100">Get Lite</a>
             </div>
         </div>
@@ -210,7 +215,7 @@
             <div class="pricing-card" style="border: 2px solid var(--accent-lime);">
                 <h4 class="fw-800">PRO</h4>
                 <div class="display-3 fw-800 my-4">€5</div>
-                <p style="color: var(--text-sub);">Unlimited Commands</p>
+                <p style="color: var(--text-sub);">Unlimited Commands • Turbo Injection</p>
                 <a href="#" class="btn-lime w-100">Unlock Pro</a>
             </div>
         </div>
@@ -218,39 +223,61 @@
 </section>
 
 <footer class="text-center py-5 border-top" style="border-color: var(--border-color) !important;">
-    <p style="color: var(--text-muted);">© 2026 VOICETYPER LABS • STOP REPEATING YOURSELF</p>
+    <p style="color: var(--text-muted);">© 2026 VOICETYPER LABS • DESIGNED FOR THE SPEED OF SOUND</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 1000, once: true });
 
-    // Live Simulator Logic
+    // Voice Simulator Logic
     const startBtn = document.getElementById('start-demo');
     const typedText = document.getElementById('typed-text');
+    const instruction = document.getElementById('demo-instruction');
+    const subtext = document.getElementById('demo-subtext');
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
     if (SpeechRecognition) {
         const recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+
         startBtn.addEventListener('click', () => {
             recognition.start();
             startBtn.innerText = "Listening...";
             typedText.innerText = "";
         });
+
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript.toLowerCase();
-            if (transcript.includes('address')) typeOut("742 Evergreen Terrace, Springfield");
-            else if (transcript.includes('email')) typeOut("support@voicetyper.io");
-            startBtn.innerText = "Click & Speak";
+            if (transcript.includes('address')) {
+                typeOut("123 Innovation Drive, Silicon Valley, CA 94025");
+            } else if (transcript.includes('email')) {
+                typeOut("hello@voicetyper.app");
+            } else {
+                instruction.innerText = `Heard: "${transcript}"`;
+                subtext.innerText = "Try saying 'Address' clearly";
+                startBtn.innerText = "Start Listening";
+            }
         };
+
+        recognition.onerror = () => {
+            startBtn.innerText = "Start Listening";
+        };
+    } else {
+        document.getElementById('error-msg').style.display = 'block';
     }
 
     function typeOut(str) {
+        startBtn.innerText = "Typing...";
         let i = 0;
         const t = setInterval(() => {
             typedText.innerText += str.charAt(i);
-            i++; if (i >= str.length) clearInterval(t);
-        }, 30);
+            i++; if (i >= str.length) {
+                clearInterval(t);
+                startBtn.innerText = "Start Listening";
+                instruction.innerText = "Instant Injection Success";
+            }
+        }, 25);
     }
 
     // Theme Toggle
@@ -258,6 +285,7 @@
         const h = document.documentElement;
         const n = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         h.setAttribute('data-theme', n);
+        document.getElementById('theme-toggle').innerText = n === 'dark' ? '🌙' : '☀️';
     });
 </script>
 </body>
